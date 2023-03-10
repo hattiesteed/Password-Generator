@@ -44,6 +44,7 @@ function generatePassword() {
   passwordLength = prompt ("Between 8 to 128 characters, how many would you like?");
   console.log("Password length " + passwordLength);
 
+
 if (!passwordLength) {
   alert("Required value");
   }
@@ -74,7 +75,7 @@ if (!Lower && !Upper && !Special && !conNumber);
 userChoice = alert("Choose a criteria");
 
 // 1 true 
-else if (Lower) {
+ if (Lower) {
   userChoice = lowerCase;
   console.log(userChoice);
 }
@@ -89,7 +90,7 @@ else if (Special){
 else if (conNumber) {
   userChoice = numbers;
   console.log(userChoice);
-};
+}
 
 
 // 2 true options
@@ -140,12 +141,18 @@ else if (Upper && conNumber && Special) {
 else if (Lower && Upper && Special && conNumber) {
   userChoice = lowerCase.concat(upperCase, special, numbers);
   console.log(userChoice);
+};
+
+
+// null for the password length
+var passwordBlank = [];
+
+// for loop for generator
+for (var i = 0, i < passwordLength; i++) {
+  var allChoices = userChoice[Math.floor(math.random() * userChoice.length)];
+  passwordBlank.push(allChoices);
+  console.log(allChoices);
 }
-
-
-
-
-
 
 
 {
