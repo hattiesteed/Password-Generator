@@ -6,11 +6,11 @@ var passwordLength;
 var Upper;
 var Lower;
 var conNumber;
-var Special;
+var sSpecial;
 var userChoice;
 
 // alphabet so password generates all letters 
-var Lower = ["a", "b", "c", "d", "e", "f","g", "h", "i", "j", "k", "l", "m", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lowerCase = ["a", "b", "c", "d", "e", "f","g", "h", "i", "j", "k", "l", "m", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // uppercase
 var letters = "abc";
@@ -46,7 +46,7 @@ function generatePassword() {
 
 
 if (!passwordLength) {
-  alert("Required value");
+  alert("Required value ");
   }
 
   
@@ -63,17 +63,17 @@ else {
   Upper = confirm("Do you want to include uppercase letters?");
   console.log("Uppercase " + Upper);
   
-  Special = confirm("Do you want to include special characters?");
-  console.log("Special character " + Special);
+  sSpecial = confirm("Do you want to include special characters?");
+  console.log("Special character " + sSpecial);
 
   conNumber = confirm("Do you want to include numbers? ");
   console.log("Number " + conNumber);
- } };
+  };
 
 // chose nothing
-if (!Lower && !Upper && !Special && !conNumber);
+if (!Lower && !Upper && !Special && !conNumber) {
 userChoice = alert("Choose a criteria");
-
+}
 // 1 true 
  if (Lower) {
   userChoice = lowerCase;
@@ -83,7 +83,7 @@ else if (Upper) {
   userChoice = blankUpper.concat(upperCase);
   console.log (userChoice);
 }
-else if (Special){
+else if (sSpecial) {
   userChoice = special;
   console.log(userChoice);
 }
@@ -103,7 +103,7 @@ else if (Lower && conNumber) {
   userChoice = lowerCase.concat (numbers);
   console.log(userChoice);
 }
-else if (Lower && Special) {
+else if (Lower && sSpecial) {
   userChoice = lowerCase.concat(special);
   console.log(userChoice);
 }
@@ -111,11 +111,11 @@ else if (Upper && conNumber) {
   userChoice = upperCase.concat(numbers);
   console.log(userChoice);
 }
-else if (Upper && Special) {
+else if (Upper && sSpecial) {
   userChoice =  upperCase.concat(special);
   console.log(userChoice);
 }
-else if (conNumber && Special) {
+else if (conNumber && sSpecial) {
   userChoice = numbers.concat(special);
   console.log(userChoice);
 }
@@ -125,20 +125,21 @@ else if (Lower && Upper && conNumber) {
   userChoice = lowerCase.concat(upperCase, numbers);
   console.log(userChoice);
 }
-else if (Lower && Upper && Special) {
+else if (Lower && Upper && sSpecial) {
   userChoice = lowerCase.concat(upperCase, special);
   console.log(userChoice);
 }
-else if (Lower && conNumber && Special) {
+else if (Lower && conNumber && sSpecial) {
   userChoice = lowerCase.concat(numbers, special);
   console.log(userChoice);
 }
-else if (Upper && conNumber && Special) {
+else if (Upper && conNumber && sSpecial) {
   userChoice = upperCase.concat(numbers, special);
   console.log(userChoice);
 }
+
 //  4 true
-else if (Lower && Upper && Special && conNumber) {
+else if (Lower && Upper && sSpecial && conNumber) {
   userChoice = lowerCase.concat(upperCase, special, numbers);
   console.log(userChoice);
 };
@@ -148,14 +149,13 @@ else if (Lower && Upper && Special && conNumber) {
 var passwordBlank = [];
 
 // for loop for generator
-for (var i = 0, i < passwordLength; i++) {
-  var allChoices = userChoice[Math.floor(math.random() * userChoice.length)];
-  passwordBlank.push(allChoices);
-  console.log(allChoices);
+for (var i = 0; i < passwordLength; i++) {
+  var allChoice = userChoice[Math.floor(Math.random() * userChoice.length)];
+  passwordBlank.push(allChoice);
+  console.log(allChoice);
 }
 
 
-{
 // password is given
 var password = passwordBlank.join("");
 console.log("Your Password is: " + password);
