@@ -6,6 +6,7 @@
 4. All prompts answered, password is generated in the dashed box
 
 ## Link to Deployed Application
-*
+* https://hattiesteed.github.io/Password-Generator/
 
 # Screenshot Preview of Project 
+![Screenshot password generator](https://user-images.githubusercontent.com/124942272/225232031-32ed4567-fbe2-47e8-b5c9-c97dcad98a03.png)
