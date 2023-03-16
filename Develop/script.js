@@ -15,8 +15,6 @@ var blankUpper = [];
 var lowerCase = ["a", "b", "c", "d", "e", "f","g", "h", "i", "j", "k", "l", "m", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // uppercase
-// var moreLetters = lowerCase.toUpperCase();
-// console.log(moreLetters);
 for (let index = 0; index < lowerCase.length; index++) {
   const element = lowerCase[index];
   blankUpper.push(element.toUpperCase())
